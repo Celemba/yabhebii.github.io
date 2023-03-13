@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,800;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    background-color: #f9f9f9;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+  }
+  .welcome {
+    background-color: #ffc107;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transition: all 1s ease-in-out;
+  }
+
+  .welcome h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #242424;
+    text-align: center;
+  }
+
+  h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 6rem;
+    font-weight: bold;
+    color: #f44336;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+  }
+
+  
+  h1 span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 5rem;
+    color: #fff;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    animation: pulse 3s;
+  }
+  
+.why {
+    animation: flip-vertical-left 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+    animation: Move 3s ease;
+    margin-top: 10px;
+}
+
+
+  @keyframes pulse {
+    0% {
+      text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+    50% {
+      text-shadow: 0 0 50px rgba(255, 255, 255, 0.8);
+    }
+    100% {
+      text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+  }
+@keyframes Move{
+    from{
+        opacity: 0;
+        transform: translateX(-30000px);
+    }
+    to {
+        opacity: 1;
+         transform: translateX(0px);
+    }
+}
+
+ @-webkit-keyframes flip-vertical-left {
+    0% {
+      -webkit-transform: rotateY(0);
+              transform: rotateY(0);
+    }
+    100% {
+      -webkit-transform: rotateY(-180deg);
+              transform: rotateY(-180deg);
+    }
+  }
+  @keyframes flip-vertical-left {
+    0% {
+      -webkit-transform: rotateY(0);
+              transform: rotateY(0);
+    }
+    100% {
+      -webkit-transform: rotateY(-180deg);
+              transform: rotateY(-180deg);
+    }
+  }
+  
